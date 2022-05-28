@@ -82,6 +82,6 @@ public class Menu {
 	System.out.println("Cost : "+cost);
 	System.out.println("Type : "+type);
 	System.out.println("Image : "+image);
-	return "Menu []";
+	return " ";
 	}
 }

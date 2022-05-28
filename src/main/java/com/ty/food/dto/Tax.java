@@ -2,6 +2,6 @@ package com.ty.food.dto;
 
 public interface Tax {
 
-	 double CGST=18;
-	 double SGST=18;
+	 double CGST=9;
+	 double SGST=9;
 }

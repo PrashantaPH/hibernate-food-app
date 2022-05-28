@@ -10,11 +10,7 @@ public class TestMenuGetByAll {
 	public static void main(String[] args) {
 		MenuService menuService = new MenuService();
 		
-		List<Menu> menus=menuService.getAllMenu();
-		
-			for (Menu menu : menus) {
-				System.out.println(menu);
-			}
+		System.out.println(menuService.getAllMenu());
 		
 	}
 }

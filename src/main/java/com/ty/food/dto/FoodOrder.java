@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,7 +21,7 @@ public class FoodOrder {
 	private String status;
 	private double total;
 
-	@OneToMany(mappedBy = "foodOrder",cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "foodOrder",cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	List<Item> items;
 
 	public int getId() {
@@ -73,6 +74,11 @@ public class FoodOrder {
 
 	@Override
 	public String toString() {
-		return "FoodOrder [id=" + id + ", name=" + name + ", phone=" + phone + ", total=" + total + "]";
+		System.out.println("Id: " + id);
+		System.out.println("Name: " + name);
+		System.out.println("Phone: " + phone);
+		System.out.println("Total: " + total);
+		System.out.println();
+		return "";
 	}
 }

@@ -11,13 +11,6 @@ public class TestGetAllUser {
 
 		UserService service = new UserService();
 
-		List<User> users = service.getAllUser();
-
-		for (User user2 : users) {
-			System.out.println("User Name : "+user2.getName());
-			System.out.println("User Email : "+user2.getEmail());
-			System.out.println("User Password : "+user2.getPassword());
-			System.out.println("Phone No : "+user2.getPhone());
-		}
+		System.out.println(service.getAllUser());
 	}
 }

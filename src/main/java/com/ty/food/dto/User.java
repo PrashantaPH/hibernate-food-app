@@ -56,4 +56,14 @@ public class User {
 		this.phone = phone;
 	}
 
+	@Override
+	public String toString() {
+		System.out.println("User Id: " + id);
+		System.out.println("User Name : "+ name);
+		System.out.println("User Email : "+ email);
+		System.out.println("Phone No : "+ phone);
+		System.out.println();
+		return "";
+	}
+
 }

@@ -18,7 +18,7 @@ public class TestSaveFoodOrder {
 		foodOrder.setStatus("ordered");
 		
 		Item item1=new Item();
-		item1.setName("Fizza");
+		item1.setName("Pizza");
 		item1.setQauntity(1);
 		item1.setCost(150);
 		
@@ -44,7 +44,7 @@ public class TestSaveFoodOrder {
 		foodOrder.setItems(items);
 		double total =0;
 		for(Item item : items) {
-			total+=(item.getCost()*item.getQauntity());
+			total+=item.getCost();
 		}
 		
 		foodOrder.setTotal(total);

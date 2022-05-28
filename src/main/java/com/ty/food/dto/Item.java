@@ -16,6 +16,7 @@ public class Item {
 	private String name;
 	private int qauntity;
 	private double cost;
+	private double mrp;
 
 	@ManyToOne
 	@JoinColumn(name = "my_FoodOrder_Id")
@@ -50,7 +51,8 @@ public class Item {
 	}
 
 	public void setCost(double cost) {
-		this.cost = cost;
+		this.mrp = cost;
+		this.cost = qauntity * cost;
 	}
 
 	public FoodOrder getFoodOrder() {
@@ -63,7 +65,7 @@ public class Item {
 
 	@Override
 	public String toString() {
-		return "Item [id=" + id + ", name=" + name + ", qauntity=" + qauntity + ", cost=" + cost + "]";
+		System.out.println(id + "\t" + name + "\t   " + qauntity +  "       "+ mrp +"\t" + cost);
+		return "";
 	}
-
 }
